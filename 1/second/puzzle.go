@@ -1,14 +1,14 @@
 package second
 
 import (
-	"fmt"
-
 	"github.com/malafreniere/aoe2018/1/frequency"
 )
 
-func Execute(log *frequency.FrequencyChangeLog) {
-	frequencies := make(map[int]bool)
+func Execute(log *frequency.FrequencyChangeLog) int {
 	freq := 0
+
+	frequencies := make(map[int]bool)
+	frequencies[freq] = true
 
 	for {
 		for _, change := range log.Changes() {
@@ -17,8 +17,7 @@ func Execute(log *frequency.FrequencyChangeLog) {
 			_, ok := frequencies[freq]
 
 			if ok {
-				fmt.Printf("Puzzle 2: %d", freq)
-				return
+				return freq
 			}
 
 			frequencies[freq] = true

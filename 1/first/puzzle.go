@@ -1,17 +1,15 @@
 package first
 
 import (
-	"fmt"
-
 	"github.com/malafreniere/aoe2018/1/frequency"
 )
 
-func Execute(log *frequency.FrequencyChangeLog) {
+func Execute(log *frequency.FrequencyChangeLog) int {
 	freq := 0
 
 	for _, change := range log.Changes() {
 		freq = change.Apply(freq)
 	}
 
-	fmt.Printf("Puzzle 1: %d\n", freq)
+	return freq
 }
