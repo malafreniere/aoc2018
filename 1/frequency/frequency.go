@@ -33,7 +33,7 @@ func (f FrequencyChange) Apply(frequency int) int {
 	return -1
 }
 
-func (l FrequencyChangeLog) Changes() []FrequencyChange {
+func (l *FrequencyChangeLog) Changes() []FrequencyChange {
 	return l.changes[:]
 }
 
@@ -55,10 +55,10 @@ func ParseFile(file string) *FrequencyChangeLog {
 	return ParseString(content, NewLineSeparator)
 }
 
-func ParseString(value string, separtor string) *FrequencyChangeLog {
+func ParseString(value string, separator string) *FrequencyChangeLog {
 	log := &FrequencyChangeLog{changes: make([]FrequencyChange, 0, 100)}
 
-	for _, line := range strings.Split(value, separtor) {
+	for _, line := range strings.Split(value, separator) {
 		freq := parseFrequency(line)
 		log.changes = append(log.changes, freq)
 	}
