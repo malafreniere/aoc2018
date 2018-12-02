@@ -1,7 +1,7 @@
 package second
 
 import (
-	"github.com/malafreniere/aoe2018/1/frequency"
+	"github.com/malafreniere/aoc2018/1/frequency"
 )
 
 func Execute(log *frequency.FrequencyChangeLog) int {

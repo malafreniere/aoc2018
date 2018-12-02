@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/malafreniere/aoe2018/1/first"
-	"github.com/malafreniere/aoe2018/1/frequency"
-	"github.com/malafreniere/aoe2018/1/second"
+	"github.com/malafreniere/aoc2018/1/first"
+	"github.com/malafreniere/aoc2018/1/frequency"
+	"github.com/malafreniere/aoc2018/1/second"
 )
 
 func main() {

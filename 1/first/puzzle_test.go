@@ -3,7 +3,7 @@ package first
 import (
 	"testing"
 
-	"github.com/malafreniere/aoe2018/1/frequency"
+	"github.com/malafreniere/aoc2018/1/frequency"
 )
 
 func TestExecute(t *testing.T) {
